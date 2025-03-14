@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8B0C38F02D849F6300A5F9AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38EF2D849F6300A5F9AC /* AppDelegate.swift */; };
+		8B0C38F22D849F6300A5F9AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38F12D849F6300A5F9AC /* SceneDelegate.swift */; };
+		8B0C38F42D849F6300A5F9AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38F32D849F6300A5F9AC /* ViewController.swift */; };
+		8B0C38F72D849F6300A5F9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C38F52D849F6300A5F9AC /* Main.storyboard */; };
+		8B0C38FA2D849F6300A5F9AC /* GeoReminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38F82D849F6300A5F9AC /* GeoReminders.xcdatamodeld */; };
+		8B0C38FC2D849F6500A5F9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C38FB2D849F6500A5F9AC /* Assets.xcassets */; };
+		8B0C38FF2D849F6500A5F9AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C38FD2D849F6500A5F9AC /* LaunchScreen.storyboard */; };
+		8B0C390A2D849F6500A5F9AC /* GeoRemindersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C39092D849F6500A5F9AC /* GeoRemindersTests.swift */; };
+		8B0C39152D849F6500A5F9AC /* GeoRemindersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C39142D849F6500A5F9AC /* GeoRemindersUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8B0C39062D849F6500A5F9AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B0C38E42D849F6300A5F9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B0C38EB2D849F6300A5F9AC;
+			remoteInfo = GeoReminders;
+		};
+		8B0C39112D849F6500A5F9AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8B0C38E42D849F6300A5F9AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8B0C38EB2D849F6300A5F9AC;
+			remoteInfo = GeoReminders;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8B0C38EC2D849F6300A5F9AC /* GeoReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0C38EF2D849F6300A5F9AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8B0C38F12D849F6300A5F9AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8B0C38F32D849F6300A5F9AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B0C38F62D849F6300A5F9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8B0C38F92D849F6300A5F9AC /* GeoReminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoReminders.xcdatamodel; sourceTree = "<group>"; };
+		8B0C38FB2D849F6500A5F9AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8B0C38FE2D849F6500A5F9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8B0C39002D849F6500A5F9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B0C39052D849F6500A5F9AC /* GeoRemindersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoRemindersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0C39092D849F6500A5F9AC /* GeoRemindersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoRemindersTests.swift; sourceTree = "<group>"; };
+		8B0C390B2D849F6500A5F9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B0C39102D849F6500A5F9AC /* GeoRemindersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoRemindersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B0C39142D849F6500A5F9AC /* GeoRemindersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoRemindersUITests.swift; sourceTree = "<group>"; };
+		8B0C39162D849F6500A5F9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8B0C38E92D849F6300A5F9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0C39022D849F6500A5F9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0C390D2D849F6500A5F9AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8B0C38E32D849F6300A5F9AC = {
+			isa = PBXGroup;
+			children = (
+				8B0C38EE2D849F6300A5F9AC /* GeoReminders */,
+				8B0C39082D849F6500A5F9AC /* GeoRemindersTests */,
+				8B0C39132D849F6500A5F9AC /* GeoRemindersUITests */,
+				8B0C38ED2D849F6300A5F9AC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8B0C38ED2D849F6300A5F9AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C38EC2D849F6300A5F9AC /* GeoReminders.app */,
+				8B0C39052D849F6500A5F9AC /* GeoRemindersTests.xctest */,
+				8B0C39102D849F6500A5F9AC /* GeoRemindersUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8B0C38EE2D849F6300A5F9AC /* GeoReminders */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C38EF2D849F6300A5F9AC /* AppDelegate.swift */,
+				8B0C38F12D849F6300A5F9AC /* SceneDelegate.swift */,
+				8B0C38F32D849F6300A5F9AC /* ViewController.swift */,
+				8B0C38F52D849F6300A5F9AC /* Main.storyboard */,
+				8B0C38FB2D849F6500A5F9AC /* Assets.xcassets */,
+				8B0C38FD2D849F6500A5F9AC /* LaunchScreen.storyboard */,
+				8B0C39002D849F6500A5F9AC /* Info.plist */,
+				8B0C38F82D849F6300A5F9AC /* GeoReminders.xcdatamodeld */,
+			);
+			path = GeoReminders;
+			sourceTree = "<group>";
+		};
+		8B0C39082D849F6500A5F9AC /* GeoRemindersTests */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C39092D849F6500A5F9AC /* GeoRemindersTests.swift */,
+				8B0C390B2D849F6500A5F9AC /* Info.plist */,
+			);
+			path = GeoRemindersTests;
+			sourceTree = "<group>";
+		};
+		8B0C39132D849F6500A5F9AC /* GeoRemindersUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C39142D849F6500A5F9AC /* GeoRemindersUITests.swift */,
+				8B0C39162D849F6500A5F9AC /* Info.plist */,
+			);
+			path = GeoRemindersUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8B0C38EB2D849F6300A5F9AC /* GeoReminders */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0C39192D849F6500A5F9AC /* Build configuration list for PBXNativeTarget "GeoReminders" */;
+			buildPhases = (
+				8B0C38E82D849F6300A5F9AC /* Sources */,
+				8B0C38E92D849F6300A5F9AC /* Frameworks */,
+				8B0C38EA2D849F6300A5F9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GeoReminders;
+			productName = GeoReminders;
+			productReference = 8B0C38EC2D849F6300A5F9AC /* GeoReminders.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8B0C39042D849F6500A5F9AC /* GeoRemindersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0C391C2D849F6500A5F9AC /* Build configuration list for PBXNativeTarget "GeoRemindersTests" */;
+			buildPhases = (
+				8B0C39012D849F6500A5F9AC /* Sources */,
+				8B0C39022D849F6500A5F9AC /* Frameworks */,
+				8B0C39032D849F6500A5F9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B0C39072D849F6500A5F9AC /* PBXTargetDependency */,
+			);
+			name = GeoRemindersTests;
+			productName = GeoRemindersTests;
+			productReference = 8B0C39052D849F6500A5F9AC /* GeoRemindersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8B0C390F2D849F6500A5F9AC /* GeoRemindersUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8B0C391F2D849F6500A5F9AC /* Build configuration list for PBXNativeTarget "GeoRemindersUITests" */;
+			buildPhases = (
+				8B0C390C2D849F6500A5F9AC /* Sources */,
+				8B0C390D2D849F6500A5F9AC /* Frameworks */,
+				8B0C390E2D849F6500A5F9AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8B0C39122D849F6500A5F9AC /* PBXTargetDependency */,
+			);
+			name = GeoRemindersUITests;
+			productName = GeoRemindersUITests;
+			productReference = 8B0C39102D849F6500A5F9AC /* GeoRemindersUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8B0C38E42D849F6300A5F9AC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					8B0C38EB2D849F6300A5F9AC = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					8B0C39042D849F6500A5F9AC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8B0C38EB2D849F6300A5F9AC;
+					};
+					8B0C390F2D849F6500A5F9AC = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 8B0C38EB2D849F6300A5F9AC;
+					};
+				};
+			};
+			buildConfigurationList = 8B0C38E72D849F6300A5F9AC /* Build configuration list for PBXProject "GeoReminders" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8B0C38E32D849F6300A5F9AC;
+			productRefGroup = 8B0C38ED2D849F6300A5F9AC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8B0C38EB2D849F6300A5F9AC /* GeoReminders */,
+				8B0C39042D849F6500A5F9AC /* GeoRemindersTests */,
+				8B0C390F2D849F6500A5F9AC /* GeoRemindersUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8B0C38EA2D849F6300A5F9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0C38FF2D849F6500A5F9AC /* LaunchScreen.storyboard in Resources */,
+				8B0C38FC2D849F6500A5F9AC /* Assets.xcassets in Resources */,
+				8B0C38F72D849F6300A5F9AC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0C39032D849F6500A5F9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0C390E2D849F6500A5F9AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8B0C38E82D849F6300A5F9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0C38F42D849F6300A5F9AC /* ViewController.swift in Sources */,
+				8B0C38FA2D849F6300A5F9AC /* GeoReminders.xcdatamodeld in Sources */,
+				8B0C38F02D849F6300A5F9AC /* AppDelegate.swift in Sources */,
+				8B0C38F22D849F6300A5F9AC /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0C39012D849F6500A5F9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0C390A2D849F6500A5F9AC /* GeoRemindersTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8B0C390C2D849F6500A5F9AC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B0C39152D849F6500A5F9AC /* GeoRemindersUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8B0C39072D849F6500A5F9AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B0C38EB2D849F6300A5F9AC /* GeoReminders */;
+			targetProxy = 8B0C39062D849F6500A5F9AC /* PBXContainerItemProxy */;
+		};
+		8B0C39122D849F6500A5F9AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8B0C38EB2D849F6300A5F9AC /* GeoReminders */;
+			targetProxy = 8B0C39112D849F6500A5F9AC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8B0C38F52D849F6300A5F9AC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B0C38F62D849F6300A5F9AC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8B0C38FD2D849F6500A5F9AC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8B0C38FE2D849F6500A5F9AC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8B0C39172D849F6500A5F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8B0C39182D849F6500A5F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8B0C391A2D849F6500A5F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeoReminders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takehome.GeoReminders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8B0C391B2D849F6500A5F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeoReminders/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takehome.GeoReminders;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8B0C391D2D849F6500A5F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeoRemindersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takehome.GeoRemindersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoReminders.app/GeoReminders";
+			};
+			name = Debug;
+		};
+		8B0C391E2D849F6500A5F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeoRemindersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takehome.GeoRemindersTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GeoReminders.app/GeoReminders";
+			};
+			name = Release;
+		};
+		8B0C39202D849F6500A5F9AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeoRemindersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takehome.GeoRemindersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeoReminders;
+			};
+			name = Debug;
+		};
+		8B0C39212D849F6500A5F9AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GeoRemindersUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.takehome.GeoRemindersUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GeoReminders;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8B0C38E72D849F6300A5F9AC /* Build configuration list for PBXProject "GeoReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0C39172D849F6500A5F9AC /* Debug */,
+				8B0C39182D849F6500A5F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0C39192D849F6500A5F9AC /* Build configuration list for PBXNativeTarget "GeoReminders" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0C391A2D849F6500A5F9AC /* Debug */,
+				8B0C391B2D849F6500A5F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0C391C2D849F6500A5F9AC /* Build configuration list for PBXNativeTarget "GeoRemindersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0C391D2D849F6500A5F9AC /* Debug */,
+				8B0C391E2D849F6500A5F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B0C391F2D849F6500A5F9AC /* Build configuration list for PBXNativeTarget "GeoRemindersUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8B0C39202D849F6500A5F9AC /* Debug */,
+				8B0C39212D849F6500A5F9AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		8B0C38F82D849F6300A5F9AC /* GeoReminders.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				8B0C38F92D849F6300A5F9AC /* GeoReminders.xcdatamodel */,
+			);
+			currentVersion = 8B0C38F92D849F6300A5F9AC /* GeoReminders.xcdatamodel */;
+			path = GeoReminders.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 8B0C38E42D849F6300A5F9AC /* Project object */;
+}
