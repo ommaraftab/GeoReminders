@@ -40,25 +40,38 @@ class MapViewModel: NSObject {
         }
     }
     
+    /// Saves or updates a reminder for a given location, ensuring only one reminder per location
     func saveReminder(location: Location, radius: Double, note: String) {
-        let reminder = Reminder(context: context)
-        reminder.id = UUID()
-        reminder.name = location.name
-        reminder.latitude = location.lat
-        reminder.longitude = location.lon
-        reminder.radius = radius
-        reminder.note = note
+        // Check if a reminder already exists for this location
+        let request: NSFetchRequest<Reminder> = Reminder.fetchRequest()
+        request.predicate = NSPredicate(format: "latitude == %f AND longitude == %f", location.lat, location.lon)
         
         do {
+            let existingReminders = try context.fetch(request)
+            let reminder: Reminder
+            if let existingReminder = existingReminders.first {
+                // Update existing reminder
+                reminder = existingReminder
+            } else {
+                // Create new reminder
+                reminder = Reminder(context: context)
+                reminder.id = UUID()
+                reminder.latitude = location.lat
+                reminder.longitude = location.lon
+            }
+            reminder.name = location.name
+            reminder.radius = radius
+            reminder.note = note
+            
             try context.save()
-            reminders.append(reminder)
+            fetchReminders() // Refresh reminders list to trigger UI update
             startMonitoring(reminder: reminder)
-            onRemindersUpdated?()
         } catch {
             print("Failed to save reminder: \(error)")
         }
     }
     
+    /// Fetches all reminders from Core Data
     func fetchReminders() {
         let request: NSFetchRequest<Reminder> = Reminder.fetchRequest()
         do {
@@ -70,12 +83,14 @@ class MapViewModel: NSObject {
         }
     }
     
+    /// Registers geofences for all reminders
     func registerGeofences() {
         for reminder in reminders {
             startMonitoring(reminder: reminder)
         }
     }
     
+    /// Starts monitoring a geofence for a reminder
     private func startMonitoring(reminder: Reminder) {
         guard locationManager.authorizationStatus == .authorizedAlways else { return }
         guard CLLocationManager.isMonitoringAvailable(for: CLCircularRegion.self) else { return }

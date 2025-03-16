@@ -30,9 +30,22 @@ extension MapViewController: MKMapViewDelegate {
         return view
     }
     
+    /// Handles tap on detail disclosure button for both blue and red pins
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         if let locationAnnotation = view.annotation as? LocationAnnotation {
             let detailVC = DetailViewController(location: locationAnnotation.location, viewModel: viewModel)
+            let navController = UINavigationController(rootViewController: detailVC)
+            present(navController, animated: true)
+        } else if let reminderAnnotation = view.annotation as? ReminderAnnotation {
+            // Create a temporary Location object for the reminder
+            let location = Location(
+                id: "", // ID not needed here
+                name: reminderAnnotation.reminder.name ?? "",
+                lat: reminderAnnotation.reminder.latitude,
+                lon: reminderAnnotation.reminder.longitude,
+                category: ""
+            )
+            let detailVC = DetailViewController(location: location, reminder: reminderAnnotation.reminder, viewModel: viewModel)
             let navController = UINavigationController(rootViewController: detailVC)
             present(navController, animated: true)
         }

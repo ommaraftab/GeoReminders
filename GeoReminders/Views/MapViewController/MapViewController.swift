@@ -23,7 +23,9 @@ class MapViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        viewModel.fetchReminders()
+        super.viewDidAppear(animated)
+        viewModel.fetchReminders() // Refresh reminders when view appears
+        updateMapAnnotations()     // Ensure map reflects latest state
     }
     
     private func addBackButton() {
@@ -34,44 +36,54 @@ class MapViewController: UIViewController {
         navigationController?.pushViewController(RemindersViewController(), animated: true)
     }
     
+    /// Sets up bindings to update the map when locations or reminders change
     private func setupBindings() {
         viewModel.onLocationsUpdated = { [weak self] in
             self?.updateMapAnnotations()
         }
         viewModel.onRemindersUpdated = { [weak self] in
-            self?.updateReminderAnnotations()
+            self?.updateMapAnnotations() // Update all annotations when reminders change
         }
     }
     
+    /// Updates map annotations to reflect current locations and reminders
     private func updateMapAnnotations() {
-        let annotations: [LocationAnnotation] = viewModel.locations.map { location in
+        // Clear existing annotations and overlays
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.removeOverlays(mapView.overlays)
+        
+        // Create a set of coordinates with reminders
+        let reminderCoordinates = Set(viewModel.reminders.map { "\($0.latitude),\($0.longitude)" })
+        
+        // Add blue pins for locations without reminders
+        let locationAnnotations: [LocationAnnotation] = viewModel.locations.compactMap { location in
+            let coordKey = "\(location.lat),\(location.lon)"
+            guard !reminderCoordinates.contains(coordKey) else { return nil }
             let annotation = LocationAnnotation(location: location)
             annotation.coordinate = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lon)
             annotation.title = location.name
             return annotation
         }
-        mapView.addAnnotations(annotations)
-        zoomToFitAnnotations()
-    }
-    
-    private func updateReminderAnnotations() {
-        mapView.removeOverlays(mapView.overlays)
-        let annotations: [ReminderAnnotation] = viewModel.reminders.map { reminder in
+        mapView.addAnnotations(locationAnnotations)
+        
+        // Add red pins and geofence circles for reminders
+        let reminderAnnotations: [ReminderAnnotation] = viewModel.reminders.map { reminder in
             let annotation = ReminderAnnotation(reminder: reminder)
             annotation.coordinate = CLLocationCoordinate2D(latitude: reminder.latitude, longitude: reminder.longitude)
             annotation.title = reminder.name
             return annotation
         }
-        mapView.addAnnotations(annotations)
+        mapView.addAnnotations(reminderAnnotations)
         
-        // Add geofence circles
         for reminder in viewModel.reminders {
-                    let circle = MKCircle(
-                        center: CLLocationCoordinate2D(latitude: reminder.latitude, longitude: reminder.longitude),
-                        radius: reminder.radius
-                    )
-                    mapView.addOverlay(circle)
-                }
+            let circle = MKCircle(
+                center: CLLocationCoordinate2D(latitude: reminder.latitude, longitude: reminder.longitude),
+                radius: reminder.radius
+            )
+            mapView.addOverlay(circle)
+        }
+        
+        zoomToFitAnnotations()
     }
     
     private func zoomToFitAnnotations() {
@@ -93,7 +105,6 @@ class MapViewController: UIViewController {
     
     private func addPermissionObserver() {
         NotificationCenter.default.addObserver(self, selector: #selector(showPermissionAlert), name: NSNotification.Name("ShowPermissionAlert"), object: nil)
-
     }
     
     @objc func showPermissionAlert() {

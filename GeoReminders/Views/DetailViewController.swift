@@ -9,13 +9,17 @@ import UIKit
 
 class DetailViewController: UIViewController {
     private let location: Location
+    private let reminder: Reminder? // Optional for editing existing reminders
     private let viewModel: MapViewModel
     private let radiusSlider = UISlider()
     private let radiusLabel = UILabel()
     private let noteTextField = UITextField()
+    private let saveLabel = UILabel()
+    private let nameLabel = UILabel()
     
-    init(location: Location, viewModel: MapViewModel) {
+    init(location: Location, reminder: Reminder? = nil, viewModel: MapViewModel) {
         self.location = location
+        self.reminder = reminder
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -28,10 +32,31 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupUI()
+        configureInitialValues()
     }
     
     private func setupUI() {
-        let stackView = UIStackView(arrangedSubviews: [radiusLabel, radiusSlider, noteTextField])
+        let labelFont = UIFont.systemFont(ofSize: 17)
+        let textAlignment: NSTextAlignment = .left
+        
+        saveLabel.text = "Save the geofence reminder"
+        saveLabel.font = labelFont
+        saveLabel.textAlignment = textAlignment
+        
+        radiusLabel.font = labelFont
+        radiusLabel.textAlignment = textAlignment
+        
+        nameLabel.text = "Name of reminder:"
+        nameLabel.font = labelFont
+        nameLabel.textAlignment = textAlignment
+        
+        let stackView = UIStackView(arrangedSubviews: [
+            saveLabel,
+            radiusLabel,
+            radiusSlider,
+            nameLabel,
+            noteTextField
+        ])
         stackView.axis = .vertical
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
@@ -45,9 +70,7 @@ class DetailViewController: UIViewController {
         
         radiusSlider.minimumValue = 100
         radiusSlider.maximumValue = 1000
-        radiusSlider.value = 500
         radiusSlider.addTarget(self, action: #selector(sliderChanged), for: .valueChanged)
-        radiusLabel.text = "Radius: 500m"
         
         noteTextField.placeholder = "Enter a note"
         noteTextField.borderStyle = .roundedRect
@@ -55,6 +78,17 @@ class DetailViewController: UIViewController {
         let saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveReminder))
         navigationItem.rightBarButtonItem = saveButton
         navigationItem.title = location.name
+    }
+    
+    private func configureInitialValues() {
+        if let reminder = reminder {
+            radiusSlider.value = Float(reminder.radius)
+            radiusLabel.text = "Radius: \(Int(reminder.radius))m"
+            noteTextField.text = reminder.note
+        } else {
+            radiusSlider.value = 500
+            radiusLabel.text = "Radius: 500m"
+        }
     }
     
     @objc private func sliderChanged() {
