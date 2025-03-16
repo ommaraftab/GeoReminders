@@ -9,13 +9,29 @@
 /* Begin PBXBuildFile section */
 		8B0C38F02D849F6300A5F9AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38EF2D849F6300A5F9AC /* AppDelegate.swift */; };
 		8B0C38F22D849F6300A5F9AC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38F12D849F6300A5F9AC /* SceneDelegate.swift */; };
-		8B0C38F42D849F6300A5F9AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38F32D849F6300A5F9AC /* ViewController.swift */; };
+		8B0C38F42D849F6300A5F9AC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38F32D849F6300A5F9AC /* HomeViewController.swift */; };
 		8B0C38F72D849F6300A5F9AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C38F52D849F6300A5F9AC /* Main.storyboard */; };
 		8B0C38FA2D849F6300A5F9AC /* GeoReminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C38F82D849F6300A5F9AC /* GeoReminders.xcdatamodeld */; };
 		8B0C38FC2D849F6500A5F9AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C38FB2D849F6500A5F9AC /* Assets.xcassets */; };
 		8B0C38FF2D849F6500A5F9AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0C38FD2D849F6500A5F9AC /* LaunchScreen.storyboard */; };
 		8B0C390A2D849F6500A5F9AC /* GeoRemindersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C39092D849F6500A5F9AC /* GeoRemindersTests.swift */; };
 		8B0C39152D849F6500A5F9AC /* GeoRemindersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0C39142D849F6500A5F9AC /* GeoRemindersUITests.swift */; };
+		8B444BDB2D86066700BCF4EB /* Reminder+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B444BD92D86066700BCF4EB /* Reminder+CoreDataClass.swift */; };
+		8B444BDC2D86066700BCF4EB /* Reminder+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B444BDA2D86066700BCF4EB /* Reminder+CoreDataProperties.swift */; };
+		8B9675272D84E1F80056A8CD /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9675262D84E1F80056A8CD /* MapKit.framework */; };
+		8B9675292D84E2040056A8CD /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9675282D84E2040056A8CD /* CoreLocation.framework */; };
+		8B96752B2D84E20E0056A8CD /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B96752A2D84E20E0056A8CD /* UserNotifications.framework */; };
+		8B96752E2D84E2630056A8CD /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B96752D2D84E2630056A8CD /* Location.swift */; };
+		8B9675332D84E8CC0056A8CD /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9675322D84E8CC0056A8CD /* NetworkingService.swift */; };
+		8B96753B2D84ED060056A8CD /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B96753A2D84ED060056A8CD /* MapViewController.swift */; };
+		8B9675402D84ED6B0056A8CD /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B96753F2D84ED6B0056A8CD /* MapViewModel.swift */; };
+		8B9675452D84EDC70056A8CD /* LocationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9675442D84EDC70056A8CD /* LocationAnnotation.swift */; };
+		8B96754A2D84EE320056A8CD /* MKMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9675492D84EE320056A8CD /* MKMapViewDelegate.swift */; };
+		8B96754F2D84EEA80056A8CD /* CLLocationManagerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B96754E2D84EEA80056A8CD /* CLLocationManagerDelegate.swift */; };
+		8B9675542D85F8380056A8CD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9675532D85F8380056A8CD /* DetailViewController.swift */; };
+		8B9675592D85F86B0056A8CD /* RemindersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9675582D85F86B0056A8CD /* RemindersViewController.swift */; };
+		8B96755E2D85F8A20056A8CD /* RemindersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B96755D2D85F8A20056A8CD /* RemindersViewModel.swift */; };
+		8B9675632D85F8D00056A8CD /* NSFetchedResultsControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9675622D85F8D00056A8CD /* NSFetchedResultsControllerDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +55,7 @@
 		8B0C38EC2D849F6300A5F9AC /* GeoReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0C38EF2D849F6300A5F9AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B0C38F12D849F6300A5F9AC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B0C38F32D849F6300A5F9AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8B0C38F32D849F6300A5F9AC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8B0C38F62D849F6300A5F9AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B0C38F92D849F6300A5F9AC /* GeoReminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoReminders.xcdatamodel; sourceTree = "<group>"; };
 		8B0C38FB2D849F6500A5F9AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,6 +67,22 @@
 		8B0C39102D849F6500A5F9AC /* GeoRemindersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeoRemindersUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0C39142D849F6500A5F9AC /* GeoRemindersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeoRemindersUITests.swift; sourceTree = "<group>"; };
 		8B0C39162D849F6500A5F9AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B444BD92D86066700BCF4EB /* Reminder+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+CoreDataClass.swift"; sourceTree = "<group>"; };
+		8B444BDA2D86066700BCF4EB /* Reminder+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Reminder+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		8B9675262D84E1F80056A8CD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		8B9675282D84E2040056A8CD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		8B96752A2D84E20E0056A8CD /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8B96752D2D84E2630056A8CD /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8B9675322D84E8CC0056A8CD /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		8B96753A2D84ED060056A8CD /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8B96753F2D84ED6B0056A8CD /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		8B9675442D84EDC70056A8CD /* LocationAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationAnnotation.swift; sourceTree = "<group>"; };
+		8B9675492D84EE320056A8CD /* MKMapViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKMapViewDelegate.swift; sourceTree = "<group>"; };
+		8B96754E2D84EEA80056A8CD /* CLLocationManagerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CLLocationManagerDelegate.swift; sourceTree = "<group>"; };
+		8B9675532D85F8380056A8CD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8B9675582D85F86B0056A8CD /* RemindersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewController.swift; sourceTree = "<group>"; };
+		8B96755D2D85F8A20056A8CD /* RemindersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersViewModel.swift; sourceTree = "<group>"; };
+		8B9675622D85F8D00056A8CD /* NSFetchedResultsControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSFetchedResultsControllerDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +90,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B9675292D84E2040056A8CD /* CoreLocation.framework in Frameworks */,
+				8B9675272D84E1F80056A8CD /* MapKit.framework in Frameworks */,
+				8B96752B2D84E20E0056A8CD /* UserNotifications.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +120,7 @@
 				8B0C39082D849F6500A5F9AC /* GeoRemindersTests */,
 				8B0C39132D849F6500A5F9AC /* GeoRemindersUITests */,
 				8B0C38ED2D849F6300A5F9AC /* Products */,
+				8B9675252D84E1F80056A8CD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,9 +137,14 @@
 		8B0C38EE2D849F6300A5F9AC /* GeoReminders */ = {
 			isa = PBXGroup;
 			children = (
+				8B444BEC2D860A7900BCF4EB /* ViewModels */,
+				8B444BEB2D860A5F00BCF4EB /* Views */,
+				8B444BEA2D8609BB00BCF4EB /* Services */,
+				8B444BE92D8609A100BCF4EB /* Models */,
+				8B444BD52D86061900BCF4EB /* CoreData */,
+				8B96752C2D84E2260056A8CD /* Swift Files */,
 				8B0C38EF2D849F6300A5F9AC /* AppDelegate.swift */,
 				8B0C38F12D849F6300A5F9AC /* SceneDelegate.swift */,
-				8B0C38F32D849F6300A5F9AC /* ViewController.swift */,
 				8B0C38F52D849F6300A5F9AC /* Main.storyboard */,
 				8B0C38FB2D849F6500A5F9AC /* Assets.xcassets */,
 				8B0C38FD2D849F6500A5F9AC /* LaunchScreen.storyboard */,
@@ -129,6 +170,96 @@
 				8B0C39162D849F6500A5F9AC /* Info.plist */,
 			);
 			path = GeoRemindersUITests;
+			sourceTree = "<group>";
+		};
+		8B29D0442D862EE500EA3C2B /* MapViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8B96753F2D84ED6B0056A8CD /* MapViewModel.swift */,
+				8B96754E2D84EEA80056A8CD /* CLLocationManagerDelegate.swift */,
+			);
+			path = MapViewModel;
+			sourceTree = "<group>";
+		};
+		8B444BD52D86061900BCF4EB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				8B444BD92D86066700BCF4EB /* Reminder+CoreDataClass.swift */,
+				8B444BDA2D86066700BCF4EB /* Reminder+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8B444BE92D8609A100BCF4EB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8B96752D2D84E2630056A8CD /* Location.swift */,
+				8B9675442D84EDC70056A8CD /* LocationAnnotation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8B444BEA2D8609BB00BCF4EB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8B9675322D84E8CC0056A8CD /* NetworkingService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8B444BEB2D860A5F00BCF4EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8B0C38F32D849F6300A5F9AC /* HomeViewController.swift */,
+				8B444BF42D860D6100BCF4EB /* RemindersViewController */,
+				8B444BF32D860D4900BCF4EB /* MapViewController */,
+				8B9675532D85F8380056A8CD /* DetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B444BEC2D860A7900BCF4EB /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8B29D0442D862EE500EA3C2B /* MapViewModel */,
+				8B96755D2D85F8A20056A8CD /* RemindersViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		8B444BF32D860D4900BCF4EB /* MapViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8B96753A2D84ED060056A8CD /* MapViewController.swift */,
+				8B9675492D84EE320056A8CD /* MKMapViewDelegate.swift */,
+			);
+			path = MapViewController;
+			sourceTree = "<group>";
+		};
+		8B444BF42D860D6100BCF4EB /* RemindersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8B9675582D85F86B0056A8CD /* RemindersViewController.swift */,
+				8B9675622D85F8D00056A8CD /* NSFetchedResultsControllerDelegate.swift */,
+			);
+			path = RemindersViewController;
+			sourceTree = "<group>";
+		};
+		8B9675252D84E1F80056A8CD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B96752A2D84E20E0056A8CD /* UserNotifications.framework */,
+				8B9675282D84E2040056A8CD /* CoreLocation.framework */,
+				8B9675262D84E1F80056A8CD /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8B96752C2D84E2260056A8CD /* Swift Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Swift Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,10 +392,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B0C38F42D849F6300A5F9AC /* ViewController.swift in Sources */,
+				8B0C38F42D849F6300A5F9AC /* HomeViewController.swift in Sources */,
+				8B444BDB2D86066700BCF4EB /* Reminder+CoreDataClass.swift in Sources */,
+				8B9675592D85F86B0056A8CD /* RemindersViewController.swift in Sources */,
 				8B0C38FA2D849F6300A5F9AC /* GeoReminders.xcdatamodeld in Sources */,
+				8B96752E2D84E2630056A8CD /* Location.swift in Sources */,
+				8B9675542D85F8380056A8CD /* DetailViewController.swift in Sources */,
+				8B9675332D84E8CC0056A8CD /* NetworkingService.swift in Sources */,
 				8B0C38F02D849F6300A5F9AC /* AppDelegate.swift in Sources */,
+				8B9675452D84EDC70056A8CD /* LocationAnnotation.swift in Sources */,
+				8B96754F2D84EEA80056A8CD /* CLLocationManagerDelegate.swift in Sources */,
+				8B96754A2D84EE320056A8CD /* MKMapViewDelegate.swift in Sources */,
 				8B0C38F22D849F6300A5F9AC /* SceneDelegate.swift in Sources */,
+				8B9675632D85F8D00056A8CD /* NSFetchedResultsControllerDelegate.swift in Sources */,
+				8B444BDC2D86066700BCF4EB /* Reminder+CoreDataProperties.swift in Sources */,
+				8B96753B2D84ED060056A8CD /* MapViewController.swift in Sources */,
+				8B96755E2D85F8A20056A8CD /* RemindersViewModel.swift in Sources */,
+				8B9675402D84ED6B0056A8CD /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +585,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GeoReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -459,6 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = GeoReminders/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
